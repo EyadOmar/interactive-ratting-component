@@ -1,0 +1,124 @@
+:root {
+  --pr-clr: hsl(25, 97%, 53%);
+  --light-grey: #838994;
+  --medium-grey: #272e39;
+  --dark-blue: #1e2530;
+  --very-dark-blue: #141519;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--very-dark-blue);
+  color: white;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  width: 330px;
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: 260px;
+  }
+}
+
+.grey-shape {
+  background-color: var(--light-grey);
+}
+
+section {
+  background-color: var(--dark-blue);
+  color: white;
+  padding: 1.5rem 0.5rem;
+  border-radius: 10px;
+}
+
+p {
+  color: var(--light-grey);
+}
+
+.display-none {
+  display: none;
+}
+
+/* rating section start */
+.rating .star::after {
+  content: url(./images/icon-star.svg);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rating .rating-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.6rem 0;
+}
+.rating span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--medium-grey);
+  padding: 0.2rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.rating .rating-count span:hover {
+  cursor: pointer;
+  background-color: var(--pr-clr);
+}
+
+.rating .rating-count .active {
+  background-color: var(--light-grey);
+}
+
+.rating button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--pr-clr);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.rating button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--pr-clr);
+}
+
+/* rating section end */
+
+/* rating section start */
+.thanks {
+  text-align: center;
+}
+
+.thanks img {
+  background-color: transparent;
+}
+
+.thanks p:first-of-type {
+  display: inline-block;
+  color: var(--pr-clr);
+  background-color: var(--medium-grey);
+  padding: 0.8rem;
+  border-radius: 20px;
+}
